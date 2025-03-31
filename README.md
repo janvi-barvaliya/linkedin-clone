@@ -6,7 +6,7 @@ This is a LinkedIn Clone built using React (Vite) and Firebase, with Cloudinary 
 
 🌟 Features
 
-🔐 User Authentication (Login & Signup)
+🔐 User Authentication (Login from google account)
 
 📸 Upload Images & Videos (Stored in Cloudinary)
 
