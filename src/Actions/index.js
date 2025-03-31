@@ -20,6 +20,7 @@ export const getArticles = (payload) => ({
 
 export function signInAPI() {
   return (dispatch) => {
+    provider.setCustomParameters({ prompt: "select_account" }); // Force account selection
     auth
       .signInWithPopup(provider)
       .then((payload) => {
