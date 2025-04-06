@@ -44,21 +44,6 @@ const PostModel = (props) => {
         }
     };
 
-    // Handle Video Upload from URL
-    // const handleVideoUrlUpload = async () => {
-    //     if (!videoLink) {
-    //         alert("Please enter a valid video URL.");
-    //         return;
-    //     }
-
-    //     const uploadedUrl = await uploadToCloudinary(videoLink);
-    //     if (uploadedUrl) {
-    //         setUploadedVideo(uploadedUrl);
-    //         alert("Video uploaded successfully!");
-    //     } else {
-    //         alert("Failed to upload video from URL.");
-    //     }
-    // };
     const handleVideoUrlUpload = async () => {
         if (!videoLink) return alert("Please enter a valid video URL.");
 
@@ -75,12 +60,16 @@ const PostModel = (props) => {
         setAssetArea(area);
     }
 
-    const postArticle  = (e) => {
+    const postArticle = (e) => {
         e.preventDefault();
+
+        reset(e);
+
         if (!editorText && !shareMedia && !uploadedVideo) {
             alert("Please add content before posting.");
             return;
         }
+
         const payload = {
             image: shareMedia,
             video: uploadedVideo,
@@ -90,17 +79,22 @@ const PostModel = (props) => {
         };
 
         props.postArticle(payload);
-        reset();
+
     };
 
 
     const reset = (e) => {
+        if (e) e.preventDefault();
+
         setEditorText("");
         setShareMedia("");
         setVideoLink("");
         setUploadedVideo(null);
         setAssetArea("");
-        props.handleClick(e);
+
+        if (props.handleClick) {
+            props.handleClick(e);
+        }
     }
 
     return (
@@ -125,8 +119,8 @@ const PostModel = (props) => {
                             </UserInfo>
 
                             <Editor>
-                                <textarea value={editorText} onChange={(e) => setEditorText(e.target.value)} 
-                                placeholder="What do you want to talk about?" autoFocus={true}
+                                <textarea value={editorText} onChange={(e) => setEditorText(e.target.value)}
+                                    placeholder="What do you want to talk about?" autoFocus={true}
                                 />
                                 {assetsArea === "image" ? (
                                     <UploadImage>
