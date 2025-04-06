@@ -1,10 +1,10 @@
-LinkedIn Clone
+# LinkedIn Clone
 
-🚀 Overview
+## 🚀 Overview
 
 This is a LinkedIn Clone built using React (Vite) and Firebase, with Cloudinary integrated for media storage. It allows users to create accounts, post images/videos, view other users' posts, and interact with them.
 
-🌟 Features
+## 🌟 Features
 
 🔐 User Authentication (Login from google account)
 
@@ -14,8 +14,12 @@ This is a LinkedIn Clone built using React (Vite) and Firebase, with Cloudinary 
 
 🚀 Responsive UI for all devices
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
 Frontend: React (Vite), React Router
 
 Backend: Firebase (Auth, Firestore, Storage), Cloudinary (for media)
+
+## Website Look
+
+![linkdin-clone](https://github.com/user-attachments/assets/e80b24d3-867a-4dee-a72d-a77a30044219)
