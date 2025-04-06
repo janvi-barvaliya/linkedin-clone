@@ -22,4 +22,5 @@ Backend: Firebase (Auth, Firestore, Storage), Cloudinary (for media)
 
 ## Website Look
 
-![linkdin-clone](https://github.com/user-attachments/assets/e80b24d3-867a-4dee-a72d-a77a30044219)
+![linkdin-clone](https://github.com/user-attachments/assets/2fe939a8-59f9-433b-b7d4-eb3b1a9f45ab)
+
